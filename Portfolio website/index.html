@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abel Daniel - Premium Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      color: #1f1f1f;
+      line-height: 1.7;
+    }
+
+    .intro-section {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: linear-gradient(to right, #d4fc79, #96e6a1);
+    }
+
+    .intro-section h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .intro-section h5 {
+      font-size: 1.4rem;
+      color: #2f855a;
+    }
+
+    .circle-logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 1rem auto;
+      border: 4px solid #2f855a;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-description {
+      max-width: 800px;
+      margin: 1rem auto 2rem;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .projects-section {
+      background-color: #fff;
+      padding: 4rem 1rem;
+    }
+
+    .projects-section h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      padding: 1.5rem;
+      background: #f9f9f9;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .project-card h5 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .media-section {
+      background: #ffffff;
+      padding: 4rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .media-section img {
+
+      width: 60%;
+      max-width: 80px;
+      border-radius: 2rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+   
+
+
+    .platforms-section {
+      padding: 4rem 1rem;
+      background: #e6f4ea;
+      text-align: center;
+    }
+
+    .platforms-section h3 {
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .platforms-section a {
+      font-size: 1.4rem;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #2e7d32;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .platforms-section a:hover {
+      color: #1b5e20;
+      transform: scale(1.08);
+    }
+
+    .testimonials {
+      background-color: #f7fafc;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      font-style: italic;
+      color: #555;
+    }
+
+    footer {
+      padding: 2rem 1rem;
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    /* skills*/
+
+    .btn-project {
+      border-radius: 2rem;
+      padding: 0.6rem 1.6rem;
+      margin: 0.4rem;
+      transition: all 0.3s ease;
+    }
+    .btn-project:hover {
+      transform: scale(1.07);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <img src="image/My image..jpg" alt="Abel Daniel Logo" class="circle-logo">
+    <h1>Abel Daniel</h1>
+    <h5>Front-End Developer & Content Writer</h5>
+    <p class="about-description">
+      Hey there! I'm Abel, a creative and detail-oriented frontend developer and content writer with a passion for building beautiful, user-friendly websites. I specialize in responsive web design and intuitive UI/UX that gets real results.
+    </p>
+  </section>
+
+  <!-- Project Section -->
+  <section class="projects-section">
+    <h3>Types of Websites I've Built</h3>
+    <div class="projects-grid container">
+      <div class="project-card">
+        <h5>Business Landing Pages</h5>
+        <p>Professional designs for company growth.</p>
+      </div>
+      <div class="project-card">
+        <h5>E-commerce Stores</h5>
+        <p>Fully responsive online shops with cart & checkout.</p>
+      </div>
+      <div class="project-card">
+        <h5>Portfolios</h5>
+        <p>Creative personal portfolios for freelancers and developers.</p>
+      </div>
+      <div class="project-card">
+        <h5>Blog Sites</h5>
+        <p>Clean and easy-to-manage blogging platforms.</p>
+      </div>
+    </div>
+  </section>
+         <!---Skills--->
+  <div class="section-box" data-aos="fade-up">
+  <h4 class="fw-bold mb-3">Skills</h4>
+  <ul class="list-inline">
+    <li class="list-inline-item badge bg-success m-1">HTML</li>
+    <li class="list-inline-item badge bg-success m-1">CSS</li>
+    <li class="list-inline-item badge bg-success m-1">JavaScript</li>
+    <li class="list-inline-item badge bg-success m-1">Bootstrap</li>
+    <li class="list-inline-item badge bg-success m-1">Google Docs</li>
+    <li class="list-inline-item badge bg-success m-1">Microsoft Word</li>
+    <li class="list-inline-item badge bg-success m-1">Grammarly</li>
+  </ul>
+</div>
+
+   <!----Projects---->
+   <div class="section-box text-center" data-aos="fade-up">
+  <h4 class="fw-bold mb-3">Projects</h4>
+  <a href="index 2.html" class="btn btn-outline-success btn-project">Blog Website</a>
+  <a href="index 4.html" class="btn btn-outline-success btn-project">Real estate Website</a>
+  <a href="index copy.html" class="btn btn-outline-success btn-project">E-commerce Page</a>
+  <a href="index 3.html" class="btn btn-outline-success btn-project">Landing Page</a>
+  <a href="index 5.html" class="btn btn-outline-success btn-project">Sales page Website</a>
+  <a href="index 1.html" class="btn btn-outline-success btn-project">Admin Dashboard</a>
+</div>
+
+  
+  
+  <!-- Freelance Platforms Section -->
+  <section class="platforms-section">
+    <h3>Connect With Me on Freelance Platforms</h3>
+    <div>
+      <a href="https://fiverr.com" target="_blank"><i class="bi bi-briefcase-fill"></i> Fiverr</a>
+      <a href="https://freelancer.com" target="_blank"><i class="bi bi-person-workspace"></i> Freelancer</a>
+      <a href="https://guru.com" target="_blank"><i class="bi bi-globe2"></i> Guru</a>
+      <a href="https://peopleperhour.com" target="_blank"><i class="bi bi-clock-history"></i> PeoplePerHour</a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h3>What People Say About Me</h3>
+    <div class="testimonial">
+      "Abel is a truly talented developer. He turned our messy concept into a stunning and responsive product!" – Clara A.
+    </div>
+    <div class="testimonial">
+      "Creative, dedicated, and always delivers ahead of time. Highly recommend working with Abel!" – James B.
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Abel Daniel. Designed to inspire trust and deliver excellence.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

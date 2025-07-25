@@ -1,0 +1,672 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Section - Sales Landing Page</title>
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+    }
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 120%;
+      height: 120%;
+      background: url('image/freelance\ image.jpeg') no-repeat center center/cover;
+      opacity: 0.15;
+      z-index: 0;
+      transform: rotate(-3deg);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 5rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+    .btn-cta {
+      font-size: 1.1rem;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      background: #2ecc71;
+      color: #fff;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .btn-cta:hover {
+      background: #27ae60;
+      transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+    }
+    /*css for what you.....learn*/
+     .benefits-section {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .benefit-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 1rem;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1.25rem 1.5rem rgba(0, 0, 0, 0.08);
+  }
+
+  .custom-shape {
+    position: absolute;
+    top: -50px;
+    left: -30px;
+    width: 140%;
+    height: 150px;
+    background: radial-gradient(circle at top left, #2ecc71 20%, transparent 70%);
+    z-index: 0;
+    opacity: 0.05;
+    transform: rotate(-5deg);
+  }
+
+  /* Video css*/
+   .video-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  .video-thumbnail {
+    position: relative;
+    cursor: pointer;
+  }
+  .video-thumbnail img {
+    transition: transform 0.3s ease;
+  }
+  .video-thumbnail:hover img {
+    transform: scale(1.03);
+  }
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: #2ecc71;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+  }
+  .play-button:hover {
+    color: #27ae60;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  .floating-shape-1, .floating-shape-2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(46,204,113,0.2), transparent 70%);
+    animation: floatShape 20s ease-in-out infinite;
+    z-index: 1;
+  }
+  .floating-shape-1 {
+    top: -100px;
+    left: -150px;
+  }
+  .floating-shape-2 {
+    bottom: -100px;
+    right: -150px;
+  }
+  @keyframes floatShape {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+  }
+  @media (max-width: 768px) {
+    .play-button {
+      font-size: 3rem;
+    }
+  }
+
+  /* Enroll section */
+   .timeline {
+    position: relative;
+    padding-left: 1rem;
+    margin-left: 1rem;
+  }
+  .timeline-line {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #2ecc71;
+    z-index: 1;
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 3.5rem;
+  }
+  .timeline-icon {
+    position: absolute;
+    left: -0.6rem;
+    top: 0;
+    background: #2ecc71;
+    color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: 1.25rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  .timeline-content {
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .timeline-content:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+  .floating-module-shape {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%);
+    top: -200px;
+    right: -200px;
+    border-radius: 50%;
+    animation: spinSlow 60s linear infinite;
+    z-index: 0;
+  }
+  @keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @media (max-width: 768px) {
+    .timeline {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .timeline-item {
+      padding-left: 3.25rem;
+    }
+  }
+
+   /* CTA BUTTON*/
+    .count-box {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .count-box span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .count-box small {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .cta-floating-shape {
+    position: absolute;
+    bottom: -120px;
+    left: -120px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+    animation: spinShape 40s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes spinShape {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 768px) {
+    #countdown {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .count-box {
+      flex: 1 1 40%;
+    }
+  }
+
+  /* Final cta css*/
+
+   .testimonial-card {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    border-radius: 1rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+
+  .accordion-button {
+    font-weight: 600;
+    background-color: #f8f9fa;
+    border-radius: 0.75rem;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: #e0f7ea;
+    color: #2ecc71;
+    box-shadow: none;
+  }
+
+  .accordion-body {
+    background-color: #ffffff;
+    border-radius: 0 0 0.75rem 0.75rem;
+  }
+
+  .final-cta {
+    margin-top: 5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .trust-badges img {
+    height: 48px;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .trust-badges img:hover {
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 768px) {
+    .trust-badges img {
+      height: 40px;
+      margin: 0.25rem;
+    }
+  }
+
+
+  </style>
+</head>
+<body>
+  <section class="hero d-flex align-items-center text-center">
+    <div class="container hero-content">
+      <h1 data-aos="fade-down">Start Earning with WhatsApp — Even if You're a Complete Beginner</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Discover the proven system to monetize WhatsApp and create a daily income stream with zero tech skills required.</p>
+      <a href="#purchase" class="btn btn-cta mt-3" data-aos="zoom-in" data-aos-delay="400">Buy Now</a>
+    </div>
+  </section>
+  
+    <section class="benefits-section py-5 bg-white position-relative overflow-hidden">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-3" data-aos="fade-down">What You Will Learn & Why It Matters</h2>
+        <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+          This WhatsApp course is designed to transform your phone into a tool of income, automation, and influence—regardless of your tech background.
+        </p>
+      </div>
+    </div><div class="row g-4">
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+    <div class="card h-100 shadow border-0 benefit-card">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold">01. Setting Up for Success</h5>
+        <p class="card-text small text-muted">Learn how to set up your WhatsApp professionally to attract, engage, and retain paying leads without spamming.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+    <div class="card h-100 shadow border-0 benefit-card">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold">02. Building Your Offer</h5>
+        <p class="card-text small text-muted">Discover what digital products/services you can sell—even if you're starting with nothing—and how to craft irresistible offers.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+    <div class="card h-100 shadow border-0 benefit-card">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold">03. Automation & Closing Sales</h5>
+        <p class="card-text small text-muted">Use auto-responders, personalized messaging, and secret conversion psychology to close high-ticket deals on autopilot.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div> <!-- Background shape --> <div class="custom-shape" aria-hidden="true"></div>
+</section>
+  <!---video section----->
+  <section class="video-section py-5 position-relative bg-dark text-white overflow-hidden">
+  <div class="container position-relative z-2">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-3" data-aos="fade-down">See What People Are Saying</h2>
+        <p class="lead text-light" data-aos="fade-up" data-aos-delay="100">
+          Real stories from real people—how this WhatsApp system changed their income game in days.
+        </p>
+      </div>
+    </div><div class="row justify-content-center">
+  <div class="col-lg-10 position-relative">
+    <div class="video-wrapper rounded shadow-lg" data-aos="zoom-in">
+      <div class="video-thumbnail">
+        <img src="image/freelance image.jpeg" alt="Testimonial Video" class="img-fluid rounded">
+        <div class="play-button" id="videoTrigger">
+          <i class="bi bi-play-circle-fill"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-4" data-aos="fade-up" data-aos-delay="200">
+  <a href="#purchase" class="btn btn-outline-light btn-lg px-5">Buy Now</a>
+</div>
+
+  </div> <!-- Background Shape --> <div class="floating-shape-1"></div>
+  <div class="floating-shape-2"></div> <!-- Modal for Video --> <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="ratio ratio-16x9">
+          <iframe id="videoFrame" src="" title="YouTube video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!----Enrol section----->
+  <section class="module-section py-5 position-relative text-white" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364); overflow: hidden;">
+  <div class="container position-relative z-2">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-3" data-aos="fade-down">What You'll Get Inside the Course</h2>
+        <p class="lead text-light" data-aos="fade-up" data-aos-delay="100">
+          Here's an outline of everything you're getting access to when you enroll in the WhatsApp Profit System today.
+        </p>
+      </div>
+    </div><div class="timeline position-relative">
+  <div class="timeline-line"></div>
+
+  <div class="timeline-item" data-aos="fade-right">
+    <div class="timeline-icon"><i class="bi bi-1-circle"></i></div>
+    <div class="timeline-content shadow-lg">
+      <h5 class="fw-semibold">Module 1: WhatsApp Monetization Fundamentals</h5>
+      <p class="text-muted small">Learn how WhatsApp is being used worldwide to generate income with no website, no store, and no tech barrier.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+    <div class="timeline-icon"><i class="bi bi-2-circle"></i></div>
+    <div class="timeline-content shadow-lg">
+      <h5 class="fw-semibold">Module 2: Setting Up for Sales Success</h5>
+      <p class="text-muted small">Optimize your WhatsApp profile and bio for maximum conversion, create autoresponders and build your expert image.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+    <div class="timeline-icon"><i class="bi bi-3-circle"></i></div>
+    <div class="timeline-content shadow-lg">
+      <h5 class="fw-semibold">Module 3: Creating and Selling Offers</h5>
+      <p class="text-muted small">Step-by-step breakdown on how to craft high-value digital offers, sell without feeling pushy, and close clients daily.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
+    <div class="timeline-icon"><i class="bi bi-4-circle"></i></div>
+    <div class="timeline-content shadow-lg">
+      <h5 class="fw-semibold">Module 4: Automation & Scaling</h5>
+      <p class="text-muted small">Use automation tools and scripts to run your sales engine hands-free while scaling to consistent income.</p>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-5" data-aos="zoom-in">
+  <a href="#purchase" class="btn btn-success btn-lg px-5 rounded-pill">Join Now & Get Full Access</a>
+</div>
+
+  </div> <!-- Background Shapes --> <div class="floating-module-shape"></div>
+</section>
+  <!----CTA BUTTON----->
+  
+<section class="cta-timer-section py-5 bg-success text-white text-center position-relative overflow-hidden">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-3" data-aos="fade-down">Claim Your Spot Before the Timer Runs Out!</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">
+          This special offer is limited. Act now to get full access to the WhatsApp Profit System + bonuses.
+        </p><!-- Countdown Timer -->
+    <div id="countdown" class="d-flex justify-content-center gap-4 my-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="count-box">
+        <span id="days">00</span>
+        <small>Days</small>
+      </div>
+      <div class="count-box">
+        <span id="hours">00</span>
+        <small>Hours</small>
+      </div>
+      <div class="count-box">
+        <span id="minutes">00</span>
+        <small>Minutes</small>
+      </div>
+      <div class="count-box">
+        <span id="seconds">00</span>
+        <small>Seconds</small>
+      </div>
+    </div>
+
+    <a href="#purchase" class="btn btn-light btn-lg px-5 rounded-pill mt-2" data-aos="fade-up" data-aos-delay="300">Buy Now</a>
+  </div>
+</div>
+
+  </div> <!-- Animated Background Shape --> <div class="cta-floating-shape"></div>
+</section>
+  <!---TEST AND FAQ----->
+  <section class="testimonials-faq-cta bg-light text-dark py-5">
+  <div class="container">
+    <!-- Testimonials Section -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold mb-3" data-aos="fade-down">What Our Students Say</h2>
+      <p class="lead text-muted" data-aos="fade-up">Don’t just take our word for it — hear from real students who took the leap.</p>
+    </div><div class="row g-4 mb-5">
+  <div class="col-md-6 col-lg-4" data-aos="fade-right">
+    <div class="card border-0 shadow-lg testimonial-card">
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>“I made my first ₦50,000 in 2 days from the WhatsApp strategy. Unreal.”</p>
+          <footer class="blockquote-footer">Dapo A., <cite>Student</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4" data-aos="fade-up">
+    <div class="card border-0 shadow-lg testimonial-card">
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>“This changed the way I view business. It’s powerful, clear, and real.”</p>
+          <footer class="blockquote-footer">Laura M., <cite>Digital Marketer</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4" data-aos="fade-left">
+    <div class="card border-0 shadow-lg testimonial-card">
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>“I used to think selling online was hard. Now I sell every day on WhatsApp.”</p>
+          <footer class="blockquote-footer">Tunde B., <cite>Freelancer</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ Accordion -->
+<div class="mb-5">
+  <h3 class="text-center fw-bold mb-4" data-aos="fade-down">Frequently Asked Questions</h3>
+  <div class="accordion" id="faqAccordion" data-aos="fade-up">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+          Is this course beginner-friendly?
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Yes! It’s designed for total beginners — no experience needed at all.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+          How soon can I start making money?
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Most students start seeing results within 3–7 days of implementation.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+          Do I need a website or special tools?
+        </button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Nope. All you need is WhatsApp, your phone, and internet access.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Final CTA -->
+<div class="final-cta bg-success text-white text-center p-5 rounded-4 shadow-lg position-relative" data-aos="zoom-in">
+  <h2 class="fw-bold mb-3">Ready to Change Your Life?</h2>
+  <p class="lead mb-4">Join 1,000+ students using this proven system to generate income on WhatsApp daily.</p>
+  <a href="#purchase" class="btn btn-light btn-lg px-5 rounded-pill">Yes! Give Me Instant Access</a>
+  <div class="trust-badges mt-4">
+    <img src="image/freelance image.jpeg" alt="100% Guarantee">
+    <img src="image/freelance image.jpeg" alt="Secure Payment">
+    <img src="https://img.icons8.com/color/48/shield.png" alt="Protected Data">
+  </div>
+</div>
+
+  </div>
+</section>
+  <script src="js/bootstrap.bundle.js"></script>
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 150,
+    easing: 'ease-in-out'
+  });
+
+    AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 150,
+    easing: 'ease-in-out'
+  });
+
+  const trigger = document.getElementById('videoTrigger');
+  const videoFrame = document.getElementById('videoFrame');
+  const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+
+  trigger.addEventListener('click', () => {
+    videoFrame.src = 'https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1';
+    modal.show();
+  });
+
+  document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+    videoFrame.src = '';
+  });
+
+  AOS.init({
+    duration: 1200,
+    once: true,
+    offset: 150,
+    easing: 'ease-in-out'
+  });
+
+   const endTime = new Date();
+  endTime.setHours(endTime.getHours() + 6); // Countdown set to 6 hours from now
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = endTime - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").innerText = days.toString().padStart(2, '0');
+    document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+    if (diff <= 0) {
+      clearInterval(timerInterval);
+      document.getElementById("countdown").innerHTML = '<h4 class="text-light">Offer Expired</h4>';
+    }
+  }
+
+  const timerInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+   AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 120,
+    easing: 'ease-in-out'
+  });
+    </script>
+  </body>
+</html>

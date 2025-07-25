@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Blog Header + Hero</title>
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    .navbar-brand span {
+      color: #2ecc71;
+      font-weight: bold;
+    }
+    .nav-link.active {
+      font-weight: bold;
+      border-bottom: 2px solid #2ecc71;
+    }
+    .search-box {
+      position: relative;
+    }
+    .search-box input {
+      padding-right: 2.5rem;
+    }
+    .search-box button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      border: none;
+      background: transparent;
+      padding: 0 0.75rem;
+    }
+    @media (max-width: 767.98px) {
+      .search-auth {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image/freelance\ image.jpeg') center center/cover no-repeat;
+      color: #fff;
+      padding: 6rem 0;
+    }
+    .hero-content {
+      max-width: 700px;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+    .hero-btn {
+      margin-top: 2rem;
+    }
+
+    /* cta css*/
+     @media (max-width: 576px) {
+    section form .form-control-lg {
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+    }
+    section .btn-lg {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+
+   /* footer css */
+    .footer-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(145deg, #1a1a1a, #262626);
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+    border-top: 5px solid #2ecc71;
+  }
+
+  .footer-section a:hover {
+    color: #2ecc71 !important;
+  }
+
+  .footer-section h5, .footer-section h6 {
+    letter-spacing: 0.5px;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section .bi {
+    transition: transform 0.3s ease;
+  }
+
+  .footer-section .bi:hover {
+    transform: scale(1.3);
+    color: #2ecc71;
+  }
+
+  @media (max-width: 576px) {
+    .footer-section {
+      text-align: center;
+    }
+
+    .footer-section .row > div {
+      margin-bottom: 2rem;
+    }
+  }
+  </style>
+</head>
+<body>
+  <header class="bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light container py-2">
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        Code<span>Blog</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Politics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Wellness</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Entertainment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tech</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 search-auth">
+          <div class="search-box">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search..."
+            />
+            <button><i class="bi bi-search"></i></button>
+          </div>
+          <a href="#" class="btn btn-outline-success">Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-section d-flex align-items-center text-center">
+    <div class="container">
+      <div class="hero-content mx-auto">
+        <h1 class="hero-title">Breaking the News. Inspiring the World.</h1>
+        <p class="hero-subtitle">Stay ahead with our top stories, insights, and highlights—crafted just for you.</p>
+        <a href="#" class="btn btn-success btn-lg hero-btn">Explore Now</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-center">Latest Stories</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="image/freelance image.jpeg" class="card-img-top" alt="Tech Story">
+          <div class="card-body">
+            <h5 class="card-title">AI Changing the Future of Work</h5>
+            <p class="card-text">Discover how artificial intelligence is revolutionizing industries worldwide.</p>
+            <a href="#" class="btn btn-sm btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://source.unsplash.com/600x400/?politics" class="card-img-top" alt="Politics Story">
+          <div class="card-body">
+            <h5 class="card-title">Global Politics: What's Next?</h5>
+            <p class="card-text">An in-depth look at major shifts and movements reshaping global power.</p>
+            <a href="#" class="btn btn-sm btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://source.unsplash.com/600x400/?health" class="card-img-top" alt="Wellness Story">
+          <div class="card-body">
+            <h5 class="card-title">Your Guide to Holistic Wellness</h5>
+            <p class="card-text">Explore practical steps to achieve physical and mental well-being.</p>
+            <a href="#" class="btn btn-sm btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://source.unsplash.com/600x400/?entertainment" class="card-img-top" alt="Entertainment Story">
+          <div class="card-body">
+            <h5 class="card-title">Top 10 Films to Watch in 2025</h5>
+            <p class="card-text">The most anticipated releases of the year you don't want to miss.</p>
+            <a href="#" class="btn btn-sm btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://source.unsplash.com/600x400/?environment" class="card-img-top" alt="Environment Story">
+          <div class="card-body">
+            <h5 class="card-title">Climate Solutions That Work</h5>
+            <p class="card-text">How communities are solving climate change in real, measurable ways.</p>
+            <a href="#" class="btn btn-sm btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="https://source.unsplash.com/600x400/?lifestyle" class="card-img-top" alt="Lifestyle Story">
+          <div class="card-body">
+            <h5 class="card-title">Minimalism: A Better Way to Live</h5>
+            <p class="card-text">How simplifying your lifestyle can bring peace and productivity.</p>
+            <a href="#" class="btn btn-sm btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   
+    <section class="py-5">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-center">Media Highlights</h2>
+    <div class="row g-4">
+      <!-- Featured Video -->
+      <div class="col-12 col-lg-8">
+        <div class="ratio ratio-16x9 shadow rounded">
+          <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Featured Video" allowfullscreen></iframe>
+        </div>
+        <h5 class="mt-3">Behind the Headlines: Exclusive Interview</h5>
+        <p class="text-muted">Get insights from the most influential voices shaping today’s news narratives.</p>
+        <a href="#" class="btn btn-outline-success btn-sm">Watch Full Interview</a>
+      </div>
+
+      <!-- Video Gallery -->
+      <div class="col-12 col-lg-4">
+        <div class="d-flex flex-column gap-3">
+          <div class="d-flex flex-column flex-sm-row gap-2 align-items-start">
+            <img src="https://source.unsplash.com/160x90/?video" alt="Video Thumb" class="rounded" width="100">
+            <div>
+              <h6 class="mb-1">Trending: AI in 2025</h6>
+              <a href="#" class="btn btn-link btn-sm p-0">Watch Now</a>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column flex-sm-row gap-2 align-items-start">
+            <img src="https://source.unsplash.com/160x90/?news" alt="Video Thumb" class="rounded" width="100">
+            <div>
+              <h6 class="mb-1">Live: Global Economic Update</h6>
+              <a href="#" class="btn btn-link btn-sm p-0">Watch Now</a>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column flex-sm-row gap-2 align-items-start">
+            <img src="https://source.unsplash.com/160x90/?climate" alt="Video Thumb" class="rounded" width="100">
+            <div>
+              <h6 class="mb-1">Documentary: Green Future</h6>
+              <a href="#" class="btn btn-link btn-sm p-0">Watch Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Highlights -->
+      <div class="col-12 mt-5">
+        <h4 class="mb-3">Photo Stories</h4>
+        <div class="row g-3">
+          <div class="col-6 col-sm-4 col-md-3">
+            <img src="https://source.unsplash.com/400x300/?journalism" class="img-fluid rounded shadow-sm" alt="Gallery Image">
+          </div>
+          <div class="col-6 col-sm-4 col-md-3">
+            <img src="https://source.unsplash.com/400x300/?reporter" class="img-fluid rounded shadow-sm" alt="Gallery Image">
+          </div>
+          <div class="col-6 col-sm-4 col-md-3">
+            <img src="https://source.unsplash.com/400x300/?studio" class="img-fluid rounded shadow-sm" alt="Gallery Image">
+          </div>
+          <div class="col-6 col-sm-4 col-md-3">
+            <img src="https://source.unsplash.com/400x300/?newspaper" class="img-fluid rounded shadow-sm" alt="Gallery Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-center">Recommended For You</h2>
+    <div class="row g-4">
+      <!-- Recommendation Card 1 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="https://source.unsplash.com/400x250/?ai" class="card-img-top" alt="AI">
+          <div class="card-body">
+            <h6 class="card-title">The AI Tools Changing Newsrooms</h6>
+            <p class="card-text small text-muted">Curated just for you based on recent reads.</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation Card 2 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="https://source.unsplash.com/400x250/?culture" class="card-img-top" alt="Culture">
+          <div class="card-body">
+            <h6 class="card-title">How Culture Impacts Global News</h6>
+            <p class="card-text small text-muted">You may like this based on your interest in politics.</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation Card 3 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="https://source.unsplash.com/400x250/?mobile" class="card-img-top" alt="Mobile Journalism">
+          <div class="card-body">
+            <h6 class="card-title">Rise of Mobile Journalism</h6>
+            <p class="card-text small text-muted">Handpicked for tech-savvy readers.</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation Card 4 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <img src="https://source.unsplash.com/400x250/?journalist" class="card-img-top" alt="Reporter">
+          <div class="card-body">
+            <h6 class="card-title">Journalist Spotlight: In The Field</h6>
+            <p class="card-text small text-muted">Based on your reading habits this week.</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-center">Contributor Spotlight</h2>
+    <div class="row g-4">
+      <!-- Contributor Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <img src="https://source.unsplash.com/100x100/?person,writer" class="rounded-circle mb-3" alt="Contributor 1">
+            <h5 class="card-title">Alex Rivera</h5>
+            <p class="text-muted small">Senior Political Analyst</p>
+            <p class="card-text">"The world is shaped by those who dare to speak truth with boldness and balance."</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Read Articles</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributor Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <img src="https://source.unsplash.com/100x100/?woman,journalist" class="rounded-circle mb-3" alt="Contributor 2">
+            <h5 class="card-title">Fatima Ameen</h5>
+            <p class="text-muted small">Global Culture Contributor</p>
+            <p class="card-text">"Culture is not just what we live—it’s how we connect and question the world around us."</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Read Articles</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributor Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center">
+            <img src="https://source.unsplash.com/100x100/?tech,blogger" class="rounded-circle mb-3" alt="Contributor 3">
+            <h5 class="card-title">Liam Chen</h5>
+            <p class="text-muted small">Technology Columnist</p>
+            <p class="card-text">"Technology should serve humanity—not just its profit margins."</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Read Articles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   <section class="py-5 text-white position-relative" style="background: linear-gradient(135deg, #1abc9c, #16a085);">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Stay Informed. Stay Ahead.</h2>
+    <p class="mb-4">Subscribe to our newsletter and get the best of CodeBlog delivered straight to your inbox every week.</p>
+
+    <form class="row justify-content-center gx-2 gy-2">
+      <div class="col-md-5">
+        <input type="email" class="form-control form-control-lg" placeholder="Enter your email" required>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-dark btn-lg px-4">Subscribe</button>
+      </div>
+    </form>
+
+    <div class="mt-4">
+      <p class="small">Want to support independent journalism? <a href="#" class="text-white fw-bold text-decoration-underline">Contribute Now</a></p>
+    </div>
+  </div>
+</section>
+          
+       <footer class="footer-section text-white pt-5" style="background-color: #1c1c1c;">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold text-uppercase mb-3">CodeBlog</h5>
+        <p class="small">Your daily dose of authentic stories, smart opinions, and voices that matter.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+        </div>
+      </div><div class="col-md-2">
+    <h6 class="fw-semibold mb-3">Sections</h6>
+    <ul class="list-unstyled small">
+      <li><a href="#" class="text-white text-decoration-none">Politics</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Entertainment</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Wellness</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Tech</a></li>
+    </ul>
+  </div>
+
+  <div class="col-md-2">
+    <h6 class="fw-semibold mb-3">About</h6>
+    <ul class="list-unstyled small">
+      <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Advertise</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Press</a></li>
+    </ul>
+  </div>
+
+  <div class="col-md-2">
+    <h6 class="fw-semibold mb-3">Support</h6>
+    <ul class="list-unstyled small">
+      <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Contribute</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Submit a Tip</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="col-md-2">
+    <h6 class="fw-semibold mb-3">Legal</h6>
+    <ul class="list-unstyled small">
+      <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Cookie Policy</a></li>
+      <li><a href="#" class="text-white text-decoration-none">Accessibility</a></li>
+    </ul>
+  </div>
+</div>
+
+<hr class="border-secondary mb-4">
+
+<div class="d-md-flex justify-content-between align-items-center small pb-4">
+  <p class="mb-2 mb-md-0">&copy; 2025 CodeBlog. All rights reserved.</p>
+  <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for truth in media.</p>
+</div>
+
+  </div>
+</footer>
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
